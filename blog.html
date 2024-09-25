@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog</title>
+    <!-- Daisy UI CDN -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <!-- Tailwind cdn -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- google font  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- fontawesome cdn -->
+    <script src="https://kit.fontawesome.com/1cec238a8f.js" crossorigin="anonymous"></script>
+    <style>
+      .font-lexend {
+        font-family: "Lexend", sans-serif;
+        /* font-family: "Lexend", system-ui; */
+        font-optical-sizing: auto;
+        font-style: normal;
+      }
+    </style>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              color1: "#111111",
+              color17: "rgba(17, 17, 17, 0.7)",
+              color15: "rgba(17, 17, 17, 0.5)",
+              color11: "rgba(17, 17, 17, 0.1)",
+              color14: "rgba(17, 17, 17, 0.4)",
+              colorBorder: "rgba(17, 17, 17, 0.3)",
+              green: "#B4F461",
+              navColor: "#F9F7F3",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="font-lexend">
+    <section class=" ">
+      <nav class="flex justify-around font-lexend pt-6 pb-14 bg-navColor">
+        <!-- Blog Button -->
+        <a href="donation.html" class="btn px-8 pt-3 pb-10 bg-green font-semibold text-xl"
+          >Home</a
+        >
+        <!-- Donate Bangladesh -->
+        <div class="flex items-center gap-4">
+          <img src="assets/logo.png" alt="" />
+          <span class="text-xl text-color1 font-semibold hidden lg:inline"
+            >Donate Bangladesh</span
+          >
+        </div>
+        <!-- 5500 BDT -->
+        <div class="flex items-center gap-3">
+          <img src="assets/coin.png" alt="" />
+          <p class="text-color17 text-xl font-medium">
+            <span id="my-balance">5500</span>
+            <span> BDT</span>
+          </p>
+        </div>
+      </nav>
+    </section>
+    <!-- Accordio section -->
+     <section class="lg:px-10 pb-4 px-4">
+        <div class="flex items-center gap-4">
+            <p class="font-bold text-4xl my-8">Important FAQ</p>
+            <span class="text-6xl"><i class="fa-solid fa-person-circle-question"></i></span>
+        </div>
+          <div class="collapse collapse-arrow bg-white border rounded-b-sm py-6">
+            <input type="radio" name="my-accordion-2" checked="checked" />
+            <div class="collapse-title text-xl font-medium">What is the Document object Model(DOM)</div>
+            <div class="collapse-content">
+              <p>The Document Object Model (DOM) is a programming interface for web documents that represents the structure of a document in a tree-like format. This model allows JavaScript and other programming languages to interact dynamically with the content, structure, and style of a web page.</p>
+            </div>
+          </div>
+          <div class="collapse collapse-arrow bg-white border rounded-none py-6">
+            <input type="radio" name="my-accordion-2" />
+            <div class="collapse-title text-xl font-medium">How to select an element from DOM?</div>
+            <div class="collapse-content">
+              <p>In JavaScript, selecting elements from the Document Object Model (DOM) is a fundamental task, enabling dynamic interactions and manipulations of a webpage. Several methods are available for this purpose, each suited for different scenarios. The document.getElementById() method is perhaps the most straightforward, allowing you to select a single element by its ID, ensuring a direct and efficient way to access specific parts of the document. For broader selections based on class names, document.getElementsByClassName() returns a live HTMLCollection of all elements with the specified class, useful for applying changes to multiple elements sharing the same class. Similarly, document.getElementsByTagName() retrieves all elements of a specified tag, also returning a live HTMLCollection.</p>
+            </div>
+          </div>
+          
+          <div class="collapse collapse-arrow bg-white rounded-none border py-6">
+            <input type="radio" name="my-accordion-2" />
+            <div class="collapse-title text-xl font-medium">What is event delegation in the context of the DOM, and why is it useful?</div>
+            <div class="collapse-content">
+              <p>Event delegation in the context of the DOM refers to a useful technique where event listeners are set on a parent element rather than on individual child elements. This approach leverages the fact that most events in the DOM bubble up through the hierarchy of elements, allowing a single event listener on a parent element to handle events triggered by its descendants. This is particularly advantageous when you have many elements that share similar behavior upon events, such as a list of buttons or links.</p>
+            </div>
+          </div>
+
+          <div class="collapse collapse-arrow bg-white border rounded-t-sm  py-6">
+            <input type="radio" name="my-accordion-2" />
+            <div class="collapse-title text-xl font-medium">How do you manipulate an element's attribute and styled using the DOM?</div>
+            <div class="collapse-content">
+              <p>To manipulate an element's attributes and styles using the DOM in JavaScript, you typically use specific methods and properties designed for these tasks. For altering attributes, the DOM provides methods such as setAttribute, getAttribute, and removeAttribute. For instance, to change the src attribute of an image, you would use element.setAttribute('src', 'newImage.png'), which updates the source attribute of the image element to a new value. Similarly, to read or remove an attribute, you can use element.getAttribute('src') or element.removeAttribute('src') respectively.</p>
+            </div>
+          </div>
+          
+          
+          
+     </section>
+  </body>
+</html>
